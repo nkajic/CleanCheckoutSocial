@@ -1,0 +1,16 @@
+<?php
+
+use \Rubic\CleanCheckoutSocial\Block\SocialLogin;
+/** @var SocialLogin $block */
+
+?>
+<div class="social-login">
+<?php foreach ($block->getProviders() as $providerKey => $provider): ?>
+    <?php
+        if (!$block->isProviderEnabled($providerKey)) {
+            continue;
+        }
+    ?>
+    <a href="<?= $block->escapeUrl($block->getProviderLoginUrl($providerKey)) ?>"><span class="social-login-<?= $block->escapeHtmlAttr($providerKey) ?>"><?= $block->escapeHtml(__('Login with %1', ucfirst($providerKey))) ?></span></a>
+<?php endforeach; ?>
+</div>

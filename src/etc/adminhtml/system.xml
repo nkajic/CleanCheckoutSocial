@@ -13,6 +13,13 @@
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment>Allows customers to login using their Social Media accounts from inside the checkout.</comment>
                 </field>
+                <field id="show_on_customer_account_login" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Show social login on customer account register/login page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
                 <field id="enable_twitter" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Enable Twitter</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>

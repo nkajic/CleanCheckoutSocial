@@ -8,6 +8,7 @@
         <clean_checkout>
             <social_login>
                 <enabled>0</enabled>
+                <show_on_customer_account_login>1</show_on_customer_account_login>
             </social_login>
         </clean_checkout>
     </default>
