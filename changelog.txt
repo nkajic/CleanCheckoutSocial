@@ -1,0 +1,2 @@
+- feature: add social login to customer account register/login page (with option to disable in admin)
+- removed old .css styles
