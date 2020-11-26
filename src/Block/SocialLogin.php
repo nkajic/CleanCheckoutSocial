@@ -51,7 +51,10 @@ class SocialLogin extends Template
     public function getProviderLoginUrl($providerKey) {
         return $this->getUrl(
         'clean_checkout/social/authenticate',
-            ['_query' => ['provider' => $providerKey]]
+            ['_query' => [
+                'provider' => $providerKey,
+                'referer' => $this->_request->getParam('referer')
+            ]]
         );
     }
 
